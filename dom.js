@@ -27,10 +27,25 @@
 //headerTitle.innerHTML = '<h3>Hello</h3>';
 //header.style.borderBottom = 'solid 3px #000';
 
-var addItemsHeading = document.getElementById('add-items-heading');
+//var addItemsHeading = document.getElementById('add-items-heading');
 
 // Apply styles to the heading
-addItemsHeading.style.fontWeight = 'bold';
-addItemsHeading.style.color = 'green';
+//addItemsHeading.style.fontWeight = 'bold';
+//addItemsHeading.style.color = 'green';
+
+
+// GET ELEMENTBYCLASS//
+// Select the third list item and change its background color to green
+var thirdListItem = document.getElementById('items').getElementsByTagName('li')[2];
+thirdListItem.style.backgroundColor = 'green';
+
+// Select all list items and make their font weight bold
+var listItems = document.getElementById('items').getElementsByTagName('li');
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].style.fontWeight = 'bold';
+}
+
+
+
 
 
