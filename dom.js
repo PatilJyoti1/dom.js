@@ -48,23 +48,32 @@
 
 
 // Add a new li element without the same class name
-var newItem = document.createElement('li');
-newItem.textContent = 'Item 5';
-newItem.classList.add('list-group-item'); // Add the necessary class
+//var newItem = document.createElement('li');
+//newItem.textContent = 'Item 5';
+//newItem.classList.add('list-group-item'); // Add the necessary class
 
-var itemList = document.getElementById('items');
-itemList.appendChild(newItem);
+//var itemList = document.getElementById('items');
+//itemList.appendChild(newItem);
 
 // Edit the new li element using getElementsByClassName
-var listItemsByClassName = document.getElementsByClassName('list-group-item');
-listItemsByClassName[listItemsByClassName.length - 1].style.backgroundColor = 'green';
+//var listItemsByClassName = document.getElementsByClassName('list-group-item');
+//listItemsByClassName[listItemsByClassName.length - 1].style.backgroundColor = 'green';
 
 // Edit the new li element using getElementsByTagName
-var listItemsByTagName = document.getElementsByTagName('li');
-listItemsByTagName[listItemsByTagName.length - 1].style.fontWeight = 'bold';
+//var listItemsByTagName = document.getElementsByTagName('li');
+//listItemsByTagName[listItemsByTagName.length - 1].style.fontWeight = 'bold';
 
 
 
+// Change font color to green for the 2nd item in the item list
+var secondItem = document.querySelector("#items li:nth-child(2)");
+secondItem.style.color = "green";
+
+// Select all odd elements and make their background green
+var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
+oddItems.forEach(function(item) {
+  item.style.backgroundColor = "green";
+});
 
 
 
