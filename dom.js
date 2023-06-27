@@ -36,14 +36,33 @@
 
 // GET ELEMENTBYCLASS//
 // Select the third list item and change its background color to green
-var thirdListItem = document.getElementById('items').getElementsByTagName('li')[2];
-thirdListItem.style.backgroundColor = 'green';
+//var thirdListItem = document.getElementById('items').getElementsByTagName('li')[2];
+//thirdListItem.style.backgroundColor = 'green';
 
 // Select all list items and make their font weight bold
-var listItems = document.getElementById('items').getElementsByTagName('li');
-for (var i = 0; i < listItems.length; i++) {
-  listItems[i].style.fontWeight = 'bold';
-}
+//var listItems = document.getElementById('items').getElementsByTagName('li');
+//for (var i = 0; i < listItems.length; i++) {
+  //listItems[i].style.fontWeight = 'bold';
+//}
+
+
+
+// Add a new li element without the same class name
+var newItem = document.createElement('li');
+newItem.textContent = 'Item 5';
+newItem.classList.add('list-group-item'); // Add the necessary class
+
+var itemList = document.getElementById('items');
+itemList.appendChild(newItem);
+
+// Edit the new li element using getElementsByClassName
+var listItemsByClassName = document.getElementsByClassName('list-group-item');
+listItemsByClassName[listItemsByClassName.length - 1].style.backgroundColor = 'green';
+
+// Edit the new li element using getElementsByTagName
+var listItemsByTagName = document.getElementsByTagName('li');
+listItemsByTagName[listItemsByTagName.length - 1].style.fontWeight = 'bold';
+
 
 
 
