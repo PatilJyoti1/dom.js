@@ -66,14 +66,98 @@
 
 
 // Change font color to green for the 2nd item in the item list
-var secondItem = document.querySelector("#items li:nth-child(2)");
-secondItem.style.color = "green";
+//var secondItem = document.querySelector("#items li:nth-child(2)");
+//secondItem.style.color = "green";
 
 // Select all odd elements and make their background green
-var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
-oddItems.forEach(function(item) {
-  item.style.backgroundColor = "green";
-});
+//var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
+//oddItems.forEach(function(item) {
+ // item.style.backgroundColor = "green";
+//});
 
+//TRAVERSING THE DOM//
+var itemList = document.querySelector('#items');
+//parentNode
+//console.log(itemList.parentNode);
+//itemList.parentNode.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentNode.parentNode.parentNode);
+
+//parenElement
+//console.log(itemList.parentElement);
+//itemList.parentElement.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentElement.parentElement.parentElement);
+
+
+// childnode
+//console.log(itemList.childNodes);
+
+
+//console.log(itemList.children);
+//console.log(itemList.children[1]);
+//itemList.children[1].style.backgroundColor = 'yellow';
+
+//Firstchild
+//console.log(itemList.firstChild);
+//firstelemenuchild
+//console.log(itemList.firstElementChild);
+//itemList.firstElementChild.textContent = 'Hello 1';
+
+//Lastchild
+//console.log(itemList.lastchild);
+//lastelemenuchild
+//console.log(itemList.lastElementChild);
+//itemList.lastElementChild.textContent = 'Hello 4';
+
+//nextsibling
+//console.log(itemList.nextSibling);
+//nextelementsibling
+//console.log(itemList.nextElementSibling);
+
+//priveousSibling
+//console.log(itemList.previousSibling);
+//priveousnextsibiling
+//console.log(itemList.previousElementSibling);
+//itemList.previousElementSibling.style.color = 'green';
+
+//create elements
+
+
+
+//create a div
+//var newDiv = document.createElement('div');
+
+//add class
+//newDiv.className= 'hello';
+
+//Add id
+//newDiv.id = 'hello1';
+
+//add attr
+//newDiv.setAttribute('title', 'Hello Div');
+
+//create a text node
+//var newDivText = document.createTextNode('Hello World');
+
+//add text to div
+//newDiv.appendChild(newDivText);
+
+//var container = document.querySelector('header .container');
+//var h1 = document.querySelector('header h1');
+
+//console.log(newDiv);
+
+//newDiv.style.fontSize = '30px';
+
+//container.insertBefore(newDiv, h1);
+
+// Adding "Hello" before "Item Lister"
+var headerTitle = document.getElementById('header-title');
+headerTitle.innerText = 'Hello ' + headerTitle.innerText;
+
+// Adding "Hello" before "Item 1"
+var item1 = document.querySelector('#items li:nth-child(1)');
+var helloDiv = document.createElement('div');
+helloDiv.innerText = 'Hello Item 1';
+item1.parentNode.insertBefore(helloDiv, item1);
 
 
